@@ -1,0 +1,236 @@
+<head>
+  <link rel="stylesheet" href="style-buttons.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <script src="script.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#395c78">
+  <meta name="msapplication-TileColor" content="#41297e">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:description" content="Information about the various gamemodes in Competitive TF2.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://frag.tf">
+  <meta property="og:image" content="http://frag.tf/images/logo.png">
+  <meta property="og:title" content="Gamemodes - Frag Academy">
+  <title>Gamemodes - Frag.TF</title>
+
+</head>
+
+<body onload="
+console.log('Ran onLoad() successfully...')
+disableButtonsGamemodes();
+cookieCheck();
+">
+
+  <div id="parallax-container">
+    <div class="parallax" style="background: url(images/parallax/parallaxprocess5.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxprocess4.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxprocess3.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxprocess2.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxprocess1.png);"></div>
+
+  </div>
+
+  <ul class="topnav">
+    <li>
+      <a href="index">Home</a>
+    </li>
+    <li>
+      <a href="classes">Classes</a>
+    </li>
+    <li>
+      <a class="active" href="gamemodes">Gamemodes</a>
+    </li>
+    <li>
+      <a href="videos">Videos</a>
+    </li>
+    <li>
+      <a href="partners">Partners</a>
+    </li>
+    <li>
+        <a href="practice">Practice</a>
+    </li>
+    <li>
+        <a href="glossary">Glossary</a>
+    </li>
+    <li> 
+      <a href="cup">Cup</a>
+    </li>
+    <li style="float: right;">
+      <a href="about">Frag Academy</a>
+    </li>
+    <li style="float: right;">
+      <a target="_blank" href="https://discord.gg/DTwd8P2">Discord</a>
+    </li>
+    <li style="float: right;">
+      <a title="disable this if you have a slow internet connection"><input type="checkbox" id="parallaxCheckbox"
+          onclick="checkbox()"> Parallax Background</a>
+    </li>
+  </ul>
+
+  <h1 class="single">Gamemodes<a class="resolutionwarning"
+      style="font-size:1.2vw;background-color:rgba(0,0,0,0);"><br><br>Due to various reasons, certain visual effects
+      have been disabled at this resolution/zoom.</a></h1>
+
+  <p class="intro" style="padding: 3vh; text-align:center;">There are quite a few different competitive gamemodes in
+    competitive TF2, all with their own common team compositions known as the <a
+      title='normal team composition of classes for a competitive gamemode'>'meta'</a>. Different leagues also have
+    their own variations, maps, and rules for these gamemodes,
+    so there will be some information on the leagues as well.
+    <br><br>
+    Some information found on this page is not hard fact, but instead may be opinionated. Be aware there are varying
+    opinions in the community and many of these are just some of the most common.<br><br>
+    This page uses common competitive vocabulary and slang. Certain words will be within single-quotes (e.g. <a
+      title='a definition would normally be here'>'word'</a>). You can hover over these for a small tooltip definition.
+  </p>
+
+  <div class="buttons">
+    <button onclick="hideTextUltiduo()" title="Ultiduo"> <img src="images/gamemode_emblems/ultiduo.png"
+        id="buttonUltiduo"></button>
+
+    <button onclick="hideTextFours()" title="Fours"> <img src="images/gamemode_emblems/4s.png"
+        id="buttonFours"></button>
+
+    <button onclick="hideTextSixes()" title="Sixes"> <img src="images/gamemode_emblems/6s.png"
+        id="buttonSixes"></button>
+
+    <button onclick="hideTextProlander()" title="Prolander"> <img src="images/gamemode_emblems/7s.png"
+        id="buttonProlander"></button>
+
+    <button onclick="hideTextHighlander()" title="Highlander"> <img src="images/gamemode_emblems/highlander.png"
+        id="buttonHighlander"></button>
+  </div>
+
+  <div id="hiddenUltiduo" class="hidden">
+    <h2>Ultiduo</h2>
+    <p><s>Meta</s> Forced Classes: Soldier and Medic<br><br>
+      Ultiduo is always played with two players on each team, a Soldier and a Medic. The maps will always be custom KOTH
+      maps which are very small when compared to other maps.
+      The Soldier and Medic both need to be skilled enough to manage player on the offense and defense at all times. A
+      general strategy for this gamemode is for the
+      Medic and Soldier to stay together whenever possible and for the Soldier to always stay nearest to the enemies.
+      Not much else can be said for strategy as the gameplay relies heavily on
+      <a title='the skill of killing people without using gamesense (mostly aiming and prediction)'>'DM (deathmatch)
+        skill'</a>, map knowledge, and callouts.
+
+      <br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Ultiduo" class="link" target="_blank">Comp.TF Page</a><br><br>
+    </p>
+  </div>
+
+  <div id="hiddenFours" class="hidden">
+    <h2>4v4 (a.k.a. Fours or 4s)</h2>
+    <p>Meta: Scout, Soldier, Demoman, and Medic<br><br>
+      Fours is a competitive format with 4 players on each team (as the name suggests).
+      Class restrictions are usually set to 1 per class and it is most commonly a rule that there cannot be a Heavy and
+      a Medic at the same time on a team.
+      Pyro can also occasionally be played instead of the Soldier. This gamemode usually features smaller maps, most
+      commonly KOTH and smaller
+      <a title='a type of map with 5 control points, 2 for each team and 1 neutral one.'>'5CP'</a> maps.
+
+      <br><br><a target="_blank" href="http://comp.tf/wiki/4v4" class="link" target="_blank"><br>Comp.TF Page</a><br><br>
+    </p>
+  </div>
+
+  <div id="hiddenSixes" class="hidden">
+    <h2>6v6 (a.k.a. Sixes or 6s)</h2>
+    <p>Common Meta: Scout (2x), Soldier (2x: Pocket and Roamer), Demoman, and Medic<br><br>
+      The most common map types for this gamemode are KOTH and medium-large <a
+        title='a type of map with 5 control points, 2 for each team and 1 neutral one.'>'5CP'</a> maps.
+      Commonly referenced as the staple format for competitive TF2, 6v6 has been a community favorite for a long time.
+      6v6 is by far the most frequently played
+      gamemode in tournaments. It is considered to be the best form of competitive for TF2 and has the largest
+      playerbase of all the gamemodes.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/6v6" class="link" target="_blank"><br>Comp.TF Page</a>
+
+      <h2 class="playstyle"> <img style="background-color: rgb(120, 57, 57);" src="images/gamemode_emblems/6s.png"
+          class="playstyle">Standard Sixes</h2>
+      <p>Meta: Scout (2x), Soldier (2x: Pocket and Roamer), Demoman, and Medic<br><br>
+        There are 6 classes per team in a match,
+        with class restrictions (usually) set to 2 for each class except for Demoman and Medic which are set to 1 per
+        team. Demoman and Medic are the most important
+        classes in this gamemode with Demoman being the team's greatest damage output and with the Medic being the only
+        way for the team to receive healing other than
+        health packs. Getting a kill on one of these are very important and as such, they are usually one of the main
+        focuses in a game.<br><br>The most common strategy is to
+        have a Scout and a Soldier stay by the Demoman and Medic as part of what is called the <a
+          title='group of players which stay close to the Medic'>'combo'</a>.
+        This Scout and Soldier are called Pocket or Combo players (e.g. Pocket Soldier or Combo Scout). The other two
+        players (most commonly a Scout and a Soldier)
+        are known as Flank or Roamer (e.g. Roamer Soldier or Flank Scout). These players will defend the team's flank
+        paths, clean up low-health enemies, and push
+        through the flank paths when preparing for a push.
+      </p>
+
+      <h2 class="playstyle"> <img style="background-color: rgb(57, 120, 83);" src="images/gamemode_emblems/6s.png"
+          class="playstyle">Unrestricted Sixes</h2>
+      <p>Due to its unrestrictive nature, there isn't a set meta (yet).<br>
+        Running the standard meta and adapting your composition to combat theirs seems to be an effective strategy
+        currently.<br><br>
+        6s is not a community-supported gamemode like the rest either. TF2 has its own implemented competitive mode
+        which is played with 6 players on each team, a different map
+        pool, and no restrictions at all. The restrictions in standard stem from community trial and error, but Valve is
+        attempting to balance around competitive to make a functional
+        gamemode with no restrictions.<br><br>
+        Similar to the meta, there isn't very much of a strategy for unrestricted sixes other than the strategy for
+        standard sixes. One thing the lack of restriction changes
+        drastically, however, is reactive team composition. Classes in this gamemode will change based on the enemies',
+        leading to fights of not only deathmatch skill, map-knowledge,
+        or positioning, but also class knowledge and skill as all classes and with all weapons. Based on how skilled one
+        of their players is, you could change your class or your weapon
+        to better combat their playstyle (e.g. if they have a very strong Roamer Soldier, you could change to Pyro and
+        use the Reserve Shooter to shut them down).<br><br>
+        RGL (Recharge Gaming League) also offers a No Restriction Sixes gamemode to further experiment with this and to
+        showcase how it can be played.
+
+
+      </p>
+      <p><br><br>
+      </p>
+  </div>
+
+  <div id="hiddenProlander" class="hidden">
+    <h2>Prolander*</h2>
+    <p>Meta: Scout, Soldier, Demoman, Medic, Sniper, and 2 <a
+        title='classes which will change during the game based on what classes the enemy has'>'Flex Classes'</a><br><br>
+      Prolander is one of the newest competitive formats to come to TF2. It was conceived on the idea of trying to have
+      the lowest
+      playercount possible, while still maintaining class diversity and dynamic choices. Each team has seven players on
+      either side and has the same restrictions as Highlander with only allowing one per class. It focuses on
+      mainly Payload, Attack/Defend and KOTH map types.<br><br>
+      Due to Prolander's 2 flex classes per team, a good strategy for gameplay is to change your flex players' classes
+      often to combat enemy playstyles and classes. If they have an especially skilled Spy, someone on your team may go
+      Spy. As always in competitive, you should play around your team's positioning and never advance further than where
+      you should be.
+      <br><br>"Prolander is a 7v7 format where you can only have one of each class, meaning that at any given time
+      you'll see a majority of the classes in TF2 actually being played. This also means you'll have to constantly be
+      thinking about what classes are best in that moment, to help your team or counter theirs" - sigafoo, creator of
+      Prolander<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Prolander" class="link" target="_blank">Comp.TF Page</a><br><br>
+      *Some or most of the information on this gamemode has been sourced directly from other sites and people.<br>
+      Citations and thanks are available on the <a href="about" style="color: inherit;">about page</a>.
+  </div>
+
+  <div id="hiddenHighlander" class="hidden">
+    <h2>Highlander</h2>
+    <p><s>Meta</s> Forced Classes: Scout, Soldier, Pyro, Demoman, Heavy, Engineer, Medic, Sniper, Spy<br><br>
+      Highlander is often referred to as the best way to transition from casual, 12v12 TF2 to competitive. This gamemode
+      has the most players on each team out of all other mainstream gamemodes and features all 9 classes (unlike others
+      where you usually won't see certain classes anywhere in a match). Highlander has been a long time gamemode in the
+      competitive community and is often seen as a good option for competitive when you want to main a class which isn't
+      commonly used in other gamemodes.
+
+      <br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Highlander" class="link" target="_blank">Comp.TF Page</a><br><br>
+      <br><br>
+  </div>
+
+  <div class="footer">
+    <p class="footer-p">Frag Academy, created by <a target="_blank" href="http://steamcommunity.com/id/elkyt" class="link">Elk
+      </a><br>for the betterment of the TF2 community :)</p>
+  </div>
+</body>

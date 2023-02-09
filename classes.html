@@ -1,0 +1,259 @@
+<head>
+  <link rel="stylesheet" href="style-buttons.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#395c78">
+  <meta name="msapplication-TileColor" content="#41297e">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:description" content="Information and help about all 9 classes of TF2 in competitive.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://frag.tf">
+  <meta property="og:image" content="http://frag.tf/images/logo.png">
+  <meta property="og:title" content="Classes - Frag Academy">
+  <title>Classes - Frag.TF</title>
+
+</head>
+
+<body onload="
+console.log('Ran onLoad() successfully...')
+disableButtonsClasses();
+cookieCheck();
+">
+
+  <div id="parallax-container">
+    <div class="parallax" style="background: url(images/parallax/parallaxgully5.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxgully4.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxgully3.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxgully2.png);"></div>
+    <div class="parallax" style="background: url(images/parallax/parallaxgully1.png);"></div>
+  </div>
+
+  <ul class="topnav">
+    <li>
+      <a href="index">Home</a>
+    </li>
+    <li>
+      <a class="active" href="classes">Classes</a>
+    </li>
+    <li>
+      <a href="gamemodes">Gamemodes</a>
+    </li>
+    <li>
+      <a href="videos">Videos</a>
+    </li>
+    <li>
+      <a href="partners">Partners</a>
+    </li>
+    <li>
+      <a href="practice">Practice</a>
+    </li>
+    <li>
+        <a href="glossary">Glossary</a>
+    </li>
+    <li> 
+      <a href="cup">Cup</a>
+    </li>
+    <li style="float: right;">
+      <a href="about">Frag Academy</a>
+    </li>
+    <li style="float: right;">
+      <a target="_blank" href="https://discord.gg/DTwd8P2">Discord</a>
+    </li>
+    <li style="float: right;">
+      <a title="disable this if you have a slow internet connection"><input type="checkbox" id="parallaxCheckbox"
+          onclick="checkbox()"> Parallax Background</a>
+    </li>
+  </ul>
+
+  <h1 class="single">Classes<a class="resolutionwarning"
+      style="font-size:1.2vw;background-color:rgba(0,0,0,0);"><br><br>Due to various reasons, certain visual effects
+      have been disabled at this resolution/zoom.</a></h1>
+
+  <p class="intro" style="padding: 3vh; text-align:center;">There are 9 classes in TF2, as well as many types of
+    competitive
+    gamemodes. Certain team compositions are known as
+    the <a title='normal team composition for a competitive gamemode'>'meta'</a> for that gamemode. It is not set in
+    stone, it is simply a recommendation for what the community has
+    found to be the most effective and rewarding.
+    <br><br>
+    All information found on this page is not hard fact, but instead mostly recommendation. Be aware there are varying
+    opinions in the community and these are just some of the most common.<br><br>
+    This page uses common competitive vocabulary and slang. Certain words will be within single-quotes (e.g. <a
+      title='a definition would normally be here'>'word'</a>). You can hover over these for a small tooltip definition.
+  </p>
+
+  <div class="buttons">
+    <button onclick="hideTextScout()" title="Scout"> <img src="images/class_emblems/scout.png"
+        id="buttonScout"></button>
+
+    <button onclick="hideTextSoldier()" title="Soldier"> <img src="images/class_emblems/soldier.png"
+        id="buttonSoldier"></button>
+
+    <button onclick="hideTextPyro()" title="Pyro"> <img src="images/class_emblems/pyro.png" id="buttonPyro"></button>
+
+    <button onclick="hideTextDemoman()" title="Demoman"> <img src="images/class_emblems/demoman.png"
+        id="buttonDemoman"></button>
+
+    <button onclick="hideTextHeavy()" title="Heavy"> <img src="images/class_emblems/heavy.png"
+        id="buttonHeavy"></button>
+
+    <button onclick="hideTextEngineer()" title="Engineer"> <img src="images/class_emblems/engineer.png"
+        id="buttonEngineer"></button>
+
+    <button onclick="hideTextMedic()" title="Medic"> <img src="images/class_emblems/medic.png"
+        id="buttonMedic"></button>
+
+    <button onclick="hideTextSniper()" title="Sniper"> <img src="images/class_emblems/sniper.png"
+        id="buttonSniper"></button>
+
+    <button onclick="hideTextSpy()" title="Spy"> <img src="images/class_emblems/spy.png" id="buttonSpy"></button>
+  </div>
+
+  <div id="hiddenScout" class="hidden">
+    <h2>Scout</h2>
+    <p>Gamemodes: 4v4, 6v6, Prolander (7v7), and Highlander (9v9)<br><br>Scout is, without a doubt, the most versatile
+      class of competitive TF2. He is fast, does great close-mid range damage, and can manipulate his movements quickly
+      both on
+      the ground and in the air. A Scout is an absolute necessity to any team in order to deny <a
+        title='rocket-jump towards a target to kill'>'bombs'</a> from <a href="javascript:hideTextSoldier()"
+        class="link">Soldiers</a>, quickly
+      capture points, guide Medics to safety, finish off injured opponents, and wreak absolute havoc on the
+      enemy.<br><br>
+      <div class="loadout">
+        <img src="/images/scattergun.png" class="weapon1 weapon">
+        <img src="/images/pistol.png" class="weapon2 weapon">
+        <img src="/images/boston_basher.png" class="weapon3 weapon">
+      </div>
+      <a target="_blank" href="http://comp.tf/wiki/Scout" class="link" target="_blank">Comp.TF Page</a><br><br>
+    </p>
+  </div>
+
+  <div id="hiddenSoldier" class="hidden">
+    <h2>Soldier</h2>
+    <p>Gamemodes: Ultiduo, 4v4, 6v6, Prolander (7v7), and Highlander (9v9)<br><br>
+      Competitively, Soldier is very movement oriented.
+      Due to his ability to rocket jump, he can roll out quickly and gain higher ground much easier than other classes.
+      With this higher ground, he can use his splash damage to control choke points, block off areas from enemies, and
+      deal more damage.</p>
+    <h2 class="playstyle"> <img src="images/class_emblems/pocket.png" class="playstyle"> Pocket Soldier (6v6 only)</h2>
+    <p>The primary role of the Pocket Soldier is to protect his team's <a href="javascript:hideTextMedic()"
+        class="link">Medic</a>
+      and to use his overheal (from the <a href="javascript:hideTextMedic()" class="link">Medic</a>)
+      to deal
+      damage, get kills and lead the team. The Pocket Soldier, <a href="javascript:hideTextMedic()"
+        class="link">Medic</a>,
+      and <a href="javascript:hideTextDemoman()" class="link">Demoman</a> form what is known as the <a
+        title='group of players which stay close to the Medic'>'combo'</a>.
+      Usually, the Pocket Soldier player is the team's <a title='the most active player in voice-chat, calling when
+      to push forward, fall back, use Über, and more'>'main-caller'</a>.</p>
+    <h2 class="playstyle"> <img src="images/class_emblems/roamer.png" class="playstyle"> Roamer Soldier (6v6 only)</h2>
+    <p>The Roamer Soldier's job is to protect his team's flank paths (with the help of a <a
+        href="javascript:hideTextScout()" class="link">Scout</a>) and to open up flank
+      paths in the enemy's defense. It is not uncommon for the Roamer Soldier to <a
+        title="rocket-jump towards a target to kill">'bomb'</a> or to
+      <a title='sacrifice for'>'sac'</a> for important classes like <a href="javascript:hideTextDemoman()"
+        class="link">Demoman</a> and <a href="javascript:hideTextMedic()" class="link">Medic</a>. Especially if the <a
+        href="javascript:hideTextMedic()" class="link">Medic</a> has his Übercharge, it's best
+      to <a title='pressure a Medic to use his Über early'>'force'</a> or <a
+        title='kill a Medic before he can use his Über'>'drop'</a> him to stop the enemy team
+      from pushing into an objective or choke.
+      <br></p>
+    <p><a target="_blank" href="http://comp.tf/wiki/Soldier" class="link" target="_blank"><br>Comp.TF Page</a><br><br>
+    </p>
+  </div>
+
+  <div id="hiddenPyro" class="hidden">
+    <h2>Pyro</h2>
+    <p>Gamemodes: Prolander (7v7)* and Highlander (9v9)<br><br>Generally, Pyro is a support class.
+      Pyro's main job is to protect the <a href="javascript:hideTextMedic()" class="link">Medic</a>. The Pyro also
+      has the job of neutralizing enemy Übers and pushes by
+      utilizing their airblast. The Pyro can also play a similar role as the <a href="javascript:hideTextSoldier()"
+        class="link">Roaming Soldier</a>, in which they will watch
+      their flank and open up paths behind the enemy team for theirs to push in.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Pyro" class="link" target="_blank">Comp.TF Page</a><br><br>
+      <br><br>*This gamemode's meta is new and adaptive, as such, this class may not always be used.<br><br>
+  </div>
+
+  <div id="hiddenDemoman" class="hidden">
+    <h2>Demoman</h2>
+    <p>Gamemodes: 4v4, 6v6, Prolander (7v7) and Highlander (9v9)<br><br>The Demoman has the highest damage output of
+      all meta classes throughout the competitive gamemodes. As such, he is consistently played and is one of the most
+      important classes in a game, rivaling the <a href="javascript:hideTextMedic()" class="link">Medic</a> for the
+      most vital class. Using his Stickybombs, he can
+      effectively
+      shut down a choke or an objective until killed. He generally stays with the <a
+        title='group of players which stay close to the Medic'>'combo'</a> to ensure his survival.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Demoman" class="link" target="_blank">Comp.TF Page</a><br><br>
+  </div>
+
+  <div id="hiddenHeavy" class="hidden">
+    <h2>Heavy</h2>
+    <p>Gamemodes: Prolander (7v7)* and Highlander (9v9)<br><br>When he is used, the Heavy is usually the main force for
+      pushing an enemy point. Due to his high health, he is like a slow-moving wall towards an enemy. Without a <a
+        href="javascript:hideTextMedic()" class="link">Medic</a>,
+      however, he is often easily killed, as his slow speed limits him from playing away from his team.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Heavy" class="link" target="_blank">Comp.TF Page</a><br><br>
+      <br><br>*This gamemode's meta is new and adaptive, as such, this class may not always be used.<br><br>
+  </div>
+
+  <div id="hiddenEngineer" class="hidden">
+    <h2>Engineer</h2>
+    <p>Gamemodes: Prolander (7v7)* and Highlander (9v9)<br><br>The Engineer is most often played as a defense class due
+      to how his Sentry Gun and Dispenser keep him anchored in place. He is also often used on Payload to push the cart
+      as he has the least impact when on the offense.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Engineer" class="link" target="_blank">Comp.TF Page</a><br><br>
+      <br><br>*This gamemode's meta is new and adaptive, as such, this class may not always be used.<br><br>
+  </div>
+
+  <div id="hiddenMedic" class="hidden">
+    <h2>Medic</h2>
+    <p>Gamemodes: Ultiduo, 4v4, 6v6, Prolander (7v7), and Highlander (9v9)<br><br>The Medic is used always in any
+      gamemode. His ability to use his Übercharge or Kritzkrieg allows for his team to push much easier. Having a Medic
+      is also vital for your <a href="javascript:hideTextSoldier()" class="link">Soldiers'</a> and <a
+        href="javascript:hideTextDemoman()" class="link">Demoman's</a> rollouts. Without a Medic, those classes couldn't
+      get to the
+      objective quick enough to have an impact. Because of how important the Übercharge is for the team, it is
+      necessary to keep the Medic alive and well-protected (usually through a <a
+        title='group of players which stay close to the Medic'>'combo'</a> with a <a href="javascript:hideTextSoldier()"
+        class="link">Pocket Soldier</a> and a
+      <a href="javascript:hideTextDemoman()" class="link">Demoman</a>).<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Medic" class="link" target="_blank">Comp.TF Page</a><br><br>
+  </div>
+
+  <div id="hiddenSniper" class="hidden">
+    <h2>Sniper</h2>
+    <p>Gamemodes: Prolander (7v7)* and Highlander (9v9)<br><br>Sniper's most common role is staying back and killing
+      priority targets. Usually, when he can get a <a title="specific kill">'pick'</a> on an enemy <a
+        href="javascript:hideTextMedic()" class="link">Medic</a>, <a href="javascript:hideTextDemoman()"
+        class="link">Demoman</a>, or the other <a href="javascript:hideTextSniper()" class="link">Sniper</a>, it allows
+      your team to push in safely and fully. Snipers will often need to watch out for each other as they are their
+      biggest threats.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Sniper" class="link" target="_blank">Comp.TF Page</a><br><br>
+      <br><br>*This gamemode's meta is new and adaptive, as such, this class may not always be used.<br><br>
+  </div>
+
+  <div id="hiddenSpy" class="hidden">
+    <h2>Spy</h2>
+    <p>Gamemodes: Prolander (7v7)* and Highlander (9v9)<br><br>The Spy is often played with two roles: gaining
+      information on the enemy team and picking off important targets. As Spy, you would want to stay behind the enemy
+      team and try and wait for a good stab. If an enemy is aware that you're nearby, they will alert their team and
+      they will be watching for you. Staying hidden, making callouts, and getting <a title='specific kills'>'picks'</a>
+      before a push can help your team drastically.<br><br>
+      <a target="_blank" href="http://comp.tf/wiki/Spy" class="link" target="_blank">Comp.TF Page</a><br><br>
+      *This gamemode's meta is new and adaptive, as such, this class may not always be used.<br><br>
+  </div>
+
+  <div class="footer">
+    <p class="footer-p">Frag Academy, created by <a target="_blank" href="http://steamcommunity.com/id/elkyt" class="link">Elk
+      </a><br>for
+      the
+      betterment of the TF2 community :)</p>
+  </div>
+</body>

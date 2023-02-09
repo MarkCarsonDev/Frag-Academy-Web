@@ -1,0 +1,416 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#395c78">
+    <meta name="msapplication-TileColor" content="#41297e">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:description"
+        content="A glossary to help you understand and learn competitive terms and phrases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://frag.tf">
+    <meta property="og:image" content="http://frag.tf/images/logo.png">
+    <meta property="og:title" content="Glossary - Frag Academy">
+
+    <title>Glossary - Frag.TF</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84157100-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84157100-2');
+
+        function dictionarySearch() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("dictionaryInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dictionaryTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="
+console.log('Ran onLoad() successfully...')
+cookieCheck();
+">
+
+    <body>
+
+        <div id="parallax-container">
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer6.png);"></div>
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer5.png);"></div>
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer4.png);"></div>
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer3.png);"></div>
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer2.png);"></div>
+            <div class="parallax" style="background: url(images/parallax/parallaxlayer1.png);"></div>
+        </div>
+
+        <ul class="topnav">
+            <li>
+                <a href="index">Home</a>
+            </li>
+            <li>
+                <a href="classes">Classes</a>
+            </li>
+            <li>
+                <a href="gamemodes">Gamemodes</a>
+            </li>
+            <li>
+                <a href="videos">Videos</a>
+            </li>
+            <li>
+                <a href="partners">Partners</a>
+            </li>
+            <li>
+                <a href="practice">Practice</a>
+            </li>
+            <li>
+                <a class="active" href="glossary">Glossary</a>
+            </li>
+            <li>
+                <a href="cup">Cup</a>
+            </li>
+            <li style="float: right;">
+                <a href="about">Frag Academy</a>
+            </li>
+            <li style="float: right;">
+                <a target="_blank" href="https://discord.gg/DTwd8P2">Discord</a>
+            </li>
+            <li style="float: right;">
+                <a title="disable this if you have a slow internet connection"><input type="checkbox"
+                        id="parallaxCheckbox" onclick="checkbox()"> Parallax Background</a>
+            </li>
+        </ul>
+
+        </ul>
+
+
+
+        <h1>Competitive Glossary<a class="resolutionwarning"
+                style="font-size:1.2vw;background-color:rgba(0,0,0,0);"><br><br>Due to various reasons, certain visual
+                effects have been disabled at this resolution/zoom.</a></h1>
+
+        <div class="p1" style="text-align: center; display: inline-block; width: 100%;">
+            <h2></h2>
+            <p class="intro" style="padding: 3vh; text-align:center; display: inline-block">There is a lot of different
+                slang that is used by the TF2 community. This glossary will help you
+                understand and learn some new words and phrases which are used often, and sometimes not that often.</p>
+            <input type="text" id="dictionaryInput" onkeyup="dictionarySearch()" placeholder="Search for phrases..">
+        </div>
+        <div class="p2" style="padding-bottom: 200px;">
+            <table id="dictionaryTable">
+                <tr class="header">
+                    <th style="width:20%; opacity: 0.75;">Phrase</th>
+                    <th style="width:80%; opacity: 0.75;">Definition</th>
+                </tr>
+                <tr>
+                    <td>4v4/4s/Fours</td>
+                    <td>Gamemode where teams of 4 fight against eachother. See the <a href="gamemodes">gamemodes</a>
+                        page for more information.</td>
+                </tr>
+                <tr>
+                    <td>5CP</td>
+                    <td>Short for 5 Control Points. Used to describe maps which have 5 control points on them, like
+                        Process or Granary.</td>
+                </tr>
+                <tr>
+                    <td>6v6/6s/Sixes</td>
+                    <td>Generally seen as the standard for competitive TF2. Gamemode where teams of 6 fight against
+                        eachother. See the <a href="gamemodes">gamemodes</a> page for more information.</td>
+                </tr>
+                <tr>
+                    <td>Ad/Advantage</td>
+                    <td>Used to describe either when a Medic has a greater ÜberCharge percentage than the other (e.g. Red Medic has 40%, Blu Medic has 100%. Blu Medic has a 60% uber advantage, or ad for short) or when a team has more players alive than the other (Red team has 3 alive, Blu has 6. Blu has the player ad).</td>
+                </tr>
+                <tr>
+                    <td>Airshot</td>
+                    <td>A shot with a projectile on a player who is in the air. Then further the airshot, the harder it
+                        is to consider the distance and the time it takes for the projectile to reach the player.</td>
+                </tr>
+                <tr>
+                    <td>Alt</td>
+                    <td>Used to describe an account that is used as an alternate for someone, either to hide the players
+                        identity or their skill level, allowing them to play in a lower division than they should play
+                        in.</td>
+                </tr>
+                <tr>
+                    <td>Backcap/Backcapping</td>
+                    <td>Used for when a player sneaks behind the enemy team and captures the point when they aren't
+                        close enough to it to defend it. Most common on the last point where it can capture especially
+                        quick.</td>
+                </tr>
+                <tr>
+                    <td>Baiting</td>
+                    <td>When a player on your team leads you into pushing together but doesn't follow through, leaving
+                        you alone and in too deep.</td>
+                </tr>
+                <tr>
+                    <td>BM/Bad Manners</td>
+                    <td>Used to describe when a team is using bad manners or sportsmanship in a competitive game. This
+                        can range from chat messages to using items like the Rocket Jumper to show how much better one
+                        team is than the other.</td>
+                </tr>
+                <tr>
+                    <td>Bomb/Bombing</td>
+                    <td>To rocket or sticky-jump above the enemies to shoot at them from above. Often used to attack priority targets while being difficult to hit/counter.</td>
+                </tr>
+                <tr>
+                    <td>Called/Calling</td>
+                    <td>Term used to describe when a Medic claims to have ÜberCharge. Signified by the Medic saying "I am fully charged!" This line is triggered automatically or can be forced in the voice menu. See "Faking".</td>
+                </tr>
+                <tr>
+                    <td>"Clear Comms"</td>
+                    <td>This person is telling everyone in voice chat to be quiet, either so they can say something or
+                        hear someone else make a callout.</td>
+                </tr>
+                <tr>
+                    <td>Clutch</td>
+                    <td>When a player performs well under pressure during a crucial part in a match (e.g. being the only
+                        player alive on last and saving the point from 3 people).</td>
+                </tr>
+                <tr>
+                    <td>Crutch</td>
+                    <td>Typically used to describe a weapon that compensates for a player's lack of skill (e.g. "he uses
+                        Heavy as a crutch because he can't play anything else").</td>
+                </tr>
+                <tr>
+                    <td>Combo</td>
+                    <td>Short for the combo of classes that stick around the Medic. In standard sixes, this is the Pocket Soldier, Demoman, and Medic.</td>
+                </tr>
+                <tr>
+                    <td>Comms</td>
+                    <td>Short for Communcations (e.g. Discord, Mumble, etc).</td>
+                </tr>
+                <tr>
+                    <td>Demo (Class)</td>
+                    <td>Short for Demoman.</td>
+                </tr>
+                <tr>
+                    <td>Demo (Recording)</td>
+                    <td>A recording of all game events from the recorder's POV. Started using the command 'record
+                        [demoname]'. To view or play demos, use the command 'playdemo [demoname]'. Some leagues require
+                        you to record these in the event of there being problems with the match.</td>
+                </tr>
+                <tr>
+                    <td>Dry Push</td>
+                    <td>Pushing into a point or a choke without having an ÜberCharge, usually done when your team has
+                        more players and the enemy doesn't have ÜberCharge.</td>
+                </tr>
+                <tr>
+                    <td>Drop</td>
+                    <td>Term meaning that a Medic has died with full ÜberCharge. Usually a bad thing for the Medic, as using an ÜberCharge is always better than dying with it and wasting it.</td>
+                </tr>
+                <tr>
+                    <td>Faking</td>
+                    <td>Used when a Medic manually triggers the voice-line "I am fully charged!" Can be used to change the enemy into thinking your team has an ÜberCharge. See "Called/Calling".</td>
+                </tr>
+                <tr>
+                    <td>Force/Forcing</td>
+                    <td>This term is used to describe when a Medic is forced to used their ÜberCharge. It is done when
+                        the Medic is in an unadvantageous spot so that the ÜberCharge is rendered useless and wasted.
+                        You
+                        can force by scaring the Medic into using their ÜberCharge before needed.</td>
+                </tr>
+                <tr>
+                    <td>FOV</td>
+                    <td>Field of view. Set using the console command 'fov_desired'. Default is 70, though it is highly
+                        recommended that you use 90.</td>
+                </tr>
+                <tr>
+                    <td>Frag</td>
+                    <td>Synonym for kill, sometimes used when the player has been gibbed.</td>
+                </tr>
+                <tr>
+                    <td>Have/Having</td>
+                    <td>Used to describe when a Medic has ÜberCharge.</td>
+                </tr>
+                <tr>
+                    <td>Inhouse Scrim</td>
+                    <td>An unofficial match where a team fights itself, usually involving the team's substitute players.
+                        Used to practice playing as a team, a certain map, coordination, or to try out a potential
+                        player.</td>
+                </tr>
+                <tr>
+                    <td>LFP</td>
+                    <td>Short for Looking For Players. Usually put in a team captain's name when they are looking for a
+                        player on a competitive. May include their division and/or classes they need.</td>
+                </tr>
+                <tr>
+                    <td>LFS</td>
+                    <td>Short for Looking For Scrims. Usually put in a team captain's name when they are looking for
+                        teams to scrimmage against.</td>
+                </tr>
+                <tr>
+                    <td>LFT</td>
+                    <td>Short for Looking For Team. Usually put in someones name when they are looking to join a
+                        competitive team. May include their division and/or classes they play.</td>
+                </tr>
+                <tr>
+                    <td>Lit</td>
+                    <td>Synonymous for hurt (e.g. "Medic lit 40"). Can also mean very hurt (e.g. "Medic lit").</td>
+                </tr>
+                <tr>
+                    <td>Logs</td>
+                    <td>Logs of player performance during a competitive match (usually logs.tf or sizzlingstats). Can be used to show where your team's weak points are and where you as a player can improve upon. Can be seen by doing !log after a match.</td>
+                </tr>
+                <tr>
+                    <td>Maincaller</td>
+                    <td>The person who coordinates and gives directions to the team. This person calls when and where
+                        you will push.</td>
+                </tr>
+                <tr>
+                    <td>Meta</td>
+                    <td>Most common/most effective way to player the game, as stated by the community. Refers to
+                        playstyles or weapon loadouts.</td>
+                </tr>
+                <tr>
+                    <td>MGE</td>
+                    <td>Stands for My Gaming Edge. MGE is a gamemode on community servers where players can 1v1 on
+                        snippets of maps. MGE is a very good tool for practicing your deathmatch skills and can be an
+                        arena for where you can duel people fairly.</td>
+                </tr>
+                <tr>
+                    <td>Mid</td>
+                    <td>Used to describe the middle point on a CP map.</td>
+                </tr>
+                <tr>
+                    <td>Offclass</td>
+                    <td>A class that is being played which isn't part of the meta (e.g. Sniper or Spy in 6v6).</td>
+                </tr>
+                <tr>
+                    <td>Pick</td>
+                    <td>The act of targeting and killing an enemy without needing help.</td>
+                </tr>
+                <tr>
+                    <td>Pocket</td>
+                    <td>Short for Pocket Soldier.</td>
+                </tr>
+                <tr>
+                    <td>Pop/Popping</td>
+                    <td>The act of using ÜberCharge.</td>
+                </tr>
+                <tr>
+                    <td>PUG/Pick-Up Game</td>
+                    <td>An unofficial match held in a competitive setting. Used to practice competitive TF2. Instances
+                        include TF2Center, <s>FaceIT</s>, TF2Stadium, and various, community PUG groups.</td>
+                </tr>
+                <tr>
+                    <td>Ringer</td>
+                    <td>A player who plays for a team, but is not officially rostered. Different leagues have different
+                        rules for how ringers can be accepted.</td>
+                </tr>
+                <tr>
+                    <td>Roamer</td>
+                    <td>Short for Roamer Soldier.</td>
+                </tr>
+                <tr>
+                    <td>Roll</td>
+                    <td>Used to describe when a game is very one-sided. </td>
+                </tr>
+                <tr>
+                    <td>Roster</td>
+                    <td>The official list of players who are on your team. This can usually be found on the page of your
+                        team, as well as how to add people to the roster.</td>
+                </tr>
+                <tr>
+                    <td>Rollout</td>
+                    <td>The path that a player takes to (usually) the middle control point. Usually the quickest or most
+                        effective way to get there. Videos of these can be found on <a
+                            href="http://rollout.tf">Rollout.TF</a>.</td>
+                </tr>
+                <tr>
+                    <td>Sac</td>
+                    <td>Short for Sacrifice.</td>
+                </tr>
+                <tr>
+                    <td>Sandbagging</td>
+                    <td>Synonymous with Smurfing. When a player uses an account which looks like it should be in an
+                        easier division than the player belongs in. Especially common in UGC.</td>
+                </tr>
+                <tr>
+                    <td>Scrim</td>
+                    <td>Short for Scrimmage. An unofficial match between two teams. Used to practice playing as a team,
+                        a certain map, or coordination.</td>
+                </tr>
+                <tr>
+                    <td>Smurfing</td>
+                    <td>Synonymous with Sandbagging. When a player uses an account which looks like it should be in an
+                        easier division than the player belongs in. Especially common in UGC.</td>
+                </tr>
+                <tr>
+                    <td>STV</td>
+                    <td>A demo recording from the server. Can be used to view any players POV or to see alternate
+                        angles. Automatically recorded in competitive games using the spectator named (by default)
+                        SourceTV. </td>
+                </tr>
+                <tr>
+                    <td>Sub/Substitute</td>
+                    <td>A player who substitutes for a player on a team. Substitutes are always rostered and will be
+                        used if a backup is needed.</td>
+                </tr>
+                <tr>
+                    <td>Surf/Surfing</td>
+                    <td>To use the explosive knockback of a rocket or something else to move yourself into a more
+                        advantageous position. Often used and practiced by Medics to get out of bad situations.</td>
+                </tr>
+                <tr>
+                    <td>Solly</td>
+                    <td>Short for Soldier.</td>
+                </tr>
+                <tr>
+                    <td>Tele</td>
+                    <td>Short for Teleporter.</td>
+                </tr>
+                <tr>
+                    <td>Trade</td>
+                    <td>Used to describe when a player from each team dies (e.g. "I traded for their Med").</td>
+                </tr>
+                <tr>
+                    <td>Trap/Trapped</td>
+                    <td>Short for Sticky trap. Used to describe how a doorway or choke can be trapped using the
+                        Demoman's stickybombs.</td>
+                </tr>
+                <tr>
+                    <td>Ultiduo</td>
+                    <td>Gamemode where teams of 2 (a Soldier and a Medic) fight against eachother on a specialized KOTH
+                        map.</td>
+                </tr>
+                <tr>
+                    <td>Whitelist</td>
+                    <td>The item restriction rules that the server/league you are playing on has enabled. This usually
+                        disables unbalanced weapons and items.</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="footer">
+            <p class="footer-p">Frag Academy, created by <a target="_blank" href="http://steamcommunity.com/id/elkyt"
+                    class="link">Elk
+                </a><br>for the
+                betterment of the TF2 community :)</p>
+        </div>
+    </body>
